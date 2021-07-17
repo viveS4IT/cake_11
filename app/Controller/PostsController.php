@@ -47,9 +47,7 @@ class PostsController extends AppController {
             'limit' => 3,
             'order' => array('id' => 'asc')
         );
-       echo "<pre>";
-                print_r($this->Paginator->settings);
-                exit;
+       
         $this->set('posts', $this->Paginator->paginate());
         $this->set('_serialize', array('posts'));
        
